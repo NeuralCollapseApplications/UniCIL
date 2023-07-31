@@ -68,7 +68,7 @@ data = dict(
     ),
     train=dict(
         type=dataset_type,
-        data_prefix='/opt/data/imagenet/train',
+        data_prefix='data/imagenet/train',
         pipeline=train_pipeline,
         cls_range=(0, 50),
         is_lt=True,
@@ -77,13 +77,13 @@ data = dict(
     ),
     val=dict(
         type=dataset_type,
-        data_prefix='/opt/data/imagenet/_val',
+        data_prefix='data/imagenet/_val',
         pipeline=test_pipeline,
         cls_range=(0, 0),
     ),
     test=dict(
         type=dataset_type,
-        data_prefix='/opt/data/imagenet/_val',
+        data_prefix='data/imagenet/_val',
         pipeline=test_pipeline,
         cls_range=(0, 0),
     )

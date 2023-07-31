@@ -104,7 +104,10 @@ class CIFAR100CILDataset(Dataset):
             is_lt: bool = False,
             lt_factor: int = 0.,
             lt_shuffle: bool = False,
+            is_fs: bool = False,
+            fs_num: int = 0,
     ):
+        assert not (is_fs and is_lt), "cannot be fs and lt at the same time"
         rank, world_size = get_dist_info()
         self.test_mode = test_mode
 
@@ -166,6 +169,12 @@ class CIFAR100CILDataset(Dataset):
                 for idx in range(len(order)):
                     img_num_per_cls_new.append(img_num_per_cls[order[idx]])
                 img_num_per_cls = img_num_per_cls_new
+            self.gen_imbalanced_data(img_num_per_cls)
+            self.log_class_num()
+        elif is_fs:
+            self.log_class_num()
+            assert not test_mode
+            img_num_per_cls = [fs_num] * len(CLASSES)
             self.gen_imbalanced_data(img_num_per_cls)
             self.log_class_num()
         self.logger.info("[{}]: datasets prepared.".format(self.__class__.__name__))

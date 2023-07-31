@@ -38,7 +38,7 @@ data = dict(
     ),
     train=dict(
         type='CIFAR100CILDataset',
-        data_prefix='/opt/data/cifar',
+        data_prefix='data/cifar',
         pipeline=train_pipeline,
         cls_range=(0, 50),
         subset='train',
@@ -48,14 +48,14 @@ data = dict(
     ),
     val=dict(
         type='CIFAR100CILDataset',
-        data_prefix='/opt/data/cifar',
+        data_prefix='data/cifar',
         pipeline=test_pipeline,
         cls_range=(0, 0),
         subset='test',
     ),
     test=dict(
         type='CIFAR100CILDataset',
-        data_prefix='/opt/data/cifar',
+        data_prefix='data/cifar',
         pipeline=test_pipeline,
         cls_range=(0, 0),
         subset='test',

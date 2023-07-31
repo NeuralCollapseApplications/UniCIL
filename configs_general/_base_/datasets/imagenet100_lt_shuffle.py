@@ -1,6 +1,6 @@
 _base_ = ['./rand_aug.py']
 
-dataset_type = 'ImagenetCIL1000'
+dataset_type = 'ImagenetCIL100'
 img_size = 224
 _img_resize_size = 256
 img_norm_cfg = dict(mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
@@ -68,19 +68,22 @@ data = dict(
     ),
     train=dict(
         type=dataset_type,
-        data_prefix='/opt/data/imagenet/train',
+        data_prefix='data/imagenet/train',
         pipeline=train_pipeline,
-        cls_range=(0, 500),
+        cls_range=(0, 50),
+        is_lt=True,
+        lt_factor=0.01,
+        lt_shuffle=True,
     ),
     val=dict(
         type=dataset_type,
-        data_prefix='/opt/data/imagenet/_val',
+        data_prefix='data/imagenet/_val',
         pipeline=test_pipeline,
         cls_range=(0, 0),
     ),
     test=dict(
         type=dataset_type,
-        data_prefix='/opt/data/imagenet/_val',
+        data_prefix='data/imagenet/_val',
         pipeline=test_pipeline,
         cls_range=(0, 0),
     )
