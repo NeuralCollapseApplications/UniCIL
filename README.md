@@ -50,7 +50,7 @@ DATALOC=/path/to/data LOGLOC=/path/to/logger bash tools/docker.sh
 ```
 Let's go for 🏃‍♀️running code.
 
-## CIL
+## For CIL and LTCIL
 ### CIFAR-100
 25 steps
 ```commandline
@@ -75,7 +75,11 @@ bash tools/dist_train.sh configs/imagenet/resnet18_imagenet100_25t.py 8 --seed 0
 bash tools/dist_train.sh configs/imagenet_lt/resnet18_imagenet100_shuffle_10t.py 8 --seed 0 --deterministic --work-dir /opt/logger/i100_lt_10t_shuffle
 ```
 
-## UniCIL
+## For FSCIL 
+Please refer to our another [[repo](https://github.com/NeuralCollapseApplications/FSCIL)].
+
+
+## For UniCIL (The generalized case)
 To conduct UniCIL, you need to run the base session first and run the incremental sessions beyond the base session checkpoint.
 
 **Base Session:**
