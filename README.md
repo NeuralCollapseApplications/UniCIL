@@ -92,7 +92,7 @@ bash tools_general/dist.sh train_inc configs_general/cifar_general/resnet18_cifa
 ```
 
 ## Results
-You can cacluate the average of "[ACC_MEAN]" of each session to get the **average incremental accuracy**. Be carefult that "[ACC_MEAN]" is accuracy of a specific session rather than average incremental accuracy in the tables of our paper.
+You can calculate the average of "[ACC_MEAN]" of each session to get the **average incremental accuracy**. Be careful that "[ACC_MEAN]" is the accuracy after a specific session rather than the average incremental accuracy in the tables of our paper.
 
 ## Citation
 If you find this work helpful in your research, please consider referring:
