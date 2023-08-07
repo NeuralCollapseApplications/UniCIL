@@ -7,8 +7,8 @@
 [Lefei Zhang](https://scholar.google.com/citations?user=BLKHwNwAAAAJ&hl=en),
 [Zhouchen Lin](https://zhouchenlin.github.io/),
 [Philip H.S. Torr](https://www.robots.ox.ac.uk/~phst/),
-[Bernard Ghanem](https://www.bernardghanem.com/),
-[Dacheng Tao](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html).
+[Dacheng Tao](https://www.sydney.edu.au/engineering/about/our-people/academic-staff/dacheng-tao.html),
+[Bernard Ghanem](https://www.bernardghanem.com/).
 
 [[pdf](https://arxiv.org/pdf/2308.01746)] [[arxiv](https://arxiv.org/abs/2308.01746)] [[code](https://github.com/NeuralCollapseApplications/UniCIL)]
 
