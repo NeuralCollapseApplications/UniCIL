@@ -14,13 +14,13 @@
 
 ## Environment
 
-To start, you need to install the environment with docker (in docker_env directory):
+[Optional] To start, you need to install the environment with docker (in docker_env directory):
 
 ```
 docker build -t ftc --network=host .
 ```
 
-Note that we will publish (not now for obeying the double-blind rule) the pre-installed image and no need to run the above command then.
+Note that we have published the pre-installed image and no need to run the above command if you network is well.
 
 Then, you can start a new container to run our codes:
 
@@ -91,7 +91,7 @@ bash tools_general/dist.sh train_inc configs_general/cifar_general/resnet18_cifa
 You can cacluate the average of "[ACC_MEAN]" of each session to get the **average incremental accuracy**. Be carefult that "[ACC_MEAN]" is accuracy of a specific session rather than average incremental accuracy in the tables of our paper.
 
 ## Citation
-If you find this work is helpful in your research, please consider refering:
+If you find this work helpful in your research, please consider referring:
 ```bibtex
 @article{UniCIL,
     author={Yibo Yang and Haobo Yuan and Xiangtai Li and Jianlong Wu and Lefei Zhang and Zhouchen Lin and Philip H.S. Torr and Bernard Ghanem and Dacheng Tao},
