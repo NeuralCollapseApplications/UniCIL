@@ -63,7 +63,7 @@ bash tools/dist_train.sh configs/cifar/resnet12_cifar_dist_25.py 8 --seed 0 --de
 bash tools/dist_train.sh configs/cifar_lt/resnet_cifar_shuffle_10.py 8 --seed 0 --deterministic --work-dir /opt/logger/cifar100_lt_10t_shuffle
 ```
 
-### ImageNet100
+### ImageNet-100
 25 steps
 ```commandline
 bash tools/dist_train.sh configs/imagenet/resnet18_imagenet100_25t.py 8 --seed 0 --deterministic --work-dir /opt/logger/i100_25t
@@ -76,7 +76,7 @@ bash tools/dist_train.sh configs/imagenet_lt/resnet18_imagenet100_shuffle_10t.py
 ```
 
 ## For FSCIL 
-Please refer to our another [[repo](https://github.com/NeuralCollapseApplications/FSCIL)].
+Please refer to our another [repo](https://github.com/NeuralCollapseApplications/FSCIL).
 
 
 ## For UniCIL (The generalized case)
